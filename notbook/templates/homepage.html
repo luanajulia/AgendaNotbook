@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="shortcut icon" type="img" href="../static/img/logotipo_apema.png"/>
+    <title>Agenda apema</title>
+</head>
+<body class="d-flex text-center">
+    <form class="form-login" method="POST" action="">
+        <img src="../static/img/logotipo_apema.png"  ><br><br>
+      <p><strong>AGENDA NOT-APEMA</strong></p>
+      <p></p>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input 
+            type="email" 
+            id="email"
+            name="email"
+            class="form-control mb-2"
+            placeholder="Email"
+            required
+            autofocus
+        >
+        <label for="inputPassword" class="sr-only">Senha</label>
+        <input 
+            type="password" 
+            id="senha"
+            name="senha"
+            class="form-control mb-2"
+            placeholder="Senha"
+            required
+        >
+        <br>
+        <div style="
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+">
+        <a href="http://192.168.1.51:8081/site_apema/index.php/pt/" class="btn btn-lg btn-danger btn-block" type="submit" style="width: 50%; margin-right: 10px;">
+            Sair
+        </a>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" style="width: 50%; ">
+            Entrar
+        </button>
+        </div><br>
+        {% if msg %}
+        <div class="alert alert-danger" role="alert">
+            {{ msg }}
+          </div>
+          {% endif %}
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>
